@@ -1,0 +1,22 @@
+#!/bin/sh
+NAME_USER="$1"
+NAME_EXTENSION=".desktop"
+NAME_FINAL="$NAME_USER$NAME_EXTENSION"
+if [[ -n $NAME_USER && $NAME_USER =~ ^[a-zA-Z0-9._-]+$ ]]
+then
+	cd ~/.local/share/applications
+	touch "$NAME_FINAL"
+	cat <<EOF > $NAME_FINAL
+[Desktop Entry]
+Name=
+Comment=
+Exec=
+Icon=
+Type=Application
+Terminal=
+Categories=
+EOF
+	nano $NAME_FINAL
+else
+	echo "Please specify a name and make sure there are no illegal characters"
+fi
