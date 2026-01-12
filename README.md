@@ -1,5 +1,5 @@
 # DesktopGenerator
-A simple bash script that helps generating .desktop files
+A simple shell script that helps generating .desktop files
 
 ## Useage
 1. Clone this repository or download source code archive and extract it
